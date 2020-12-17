@@ -1,0 +1,21 @@
+{
+  "name": "cmsi385_nfa-dfa",
+  "version": "1.0.0",
+  "description": "Automata ",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "NFA",
+    "DFA"
+  ],
+  "author": "Patrick Jayoma",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0",
+    "underscore": "^1.9.1"
+  }
+}

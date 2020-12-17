@@ -1,0 +1,281 @@
+[{
+  "name": "odd number of zeroes",
+  "type": "dfa",
+  "tuple": {
+    "state": [
+      "q1",
+      "q2"
+    ],
+    "alphabet": [
+      "1",
+      "0"
+    ],
+    "transition": {
+      "q1": {
+        "0": "q2",
+        "1": "q1"
+      },
+      "q2": {
+        "0": "q1",
+        "1": "q2"
+      }
+    },
+    "startState": "q1",
+    "acceptState": [
+      "q2"
+    ]
+  },
+  "passCases": [
+    "0",
+    "000",
+    "00000",
+    "10",
+    "101010",
+    "010101"
+  ],
+  "failCases": [
+    "00",
+    "0000",
+    "1001",
+    "1010",
+    "001100"
+  ]
+},
+{
+  "name": "even number of zeroes",
+  "type": "dfa",
+  "tuple": {
+    "state": [
+      "q1",
+      "q2"
+    ],
+    "alphabet": [
+      "1",
+      "0"
+    ],
+    "transition": {
+      "q1": {
+        "0": "q2",
+        "1": "q1"
+      },
+      "q2": {
+        "0": "q1",
+        "1": "q2"
+      }
+    },
+    "startState": "q1",
+    "acceptState": [
+      "q1"
+    ]
+  },
+  "failCases": [
+    "0",
+    "000",
+    "00000",
+    "10",
+    "101010",
+    "010101"
+  ],
+  "passCases": [
+    "00",
+    "0000",
+    "1001",
+    "1010",
+    "001100"
+  ]
+},
+{
+  "name": "at least one zero",
+  "type": "dfa",
+  "tuple": {
+    "state": [
+      "q1",
+      "q2"
+    ],
+    "alphabet": [
+      "1",
+      "0"
+    ],
+    "transition": {
+      "q1": {
+        "0": "q2",
+        "1": "q1"
+      },
+      "q2": {
+        "0": "q2",
+        "1": "q2"
+      }
+    },
+    "startState": "q1",
+    "acceptState": [
+      "q2"
+    ]
+  },
+  "passCases": [
+    "0",
+    "10",
+    "100",
+    "1100",
+    "01",
+    "010"
+  ],
+  "failCases": [
+    "",
+    "1",
+    "11",
+    "111"
+  ]
+},
+{
+  "name": "at least one one",
+  "type": "dfa",
+  "tuple": {
+    "state": [
+      "q1",
+      "q2"
+    ],
+    "alphabet": [
+      "1",
+      "0"
+    ],
+    "transition": {
+      "q1": {
+        "0": "q1",
+        "1": "q2"
+      },
+      "q2": {
+        "0": "q2",
+        "1": "q2"
+      }
+    },
+    "startState": "q1",
+    "acceptState": [
+      "q2"
+    ]
+  },
+  "passCases": [
+    "1",
+    "10",
+    "100",
+    "1100",
+    "01",
+    "010"
+  ],
+  "failCases": [
+    "",
+    "0",
+    "00",
+    "000"
+  ]
+},
+{
+  "name": "string length multiple of three",
+  "type": "dfa",
+  "tuple": {
+    "state": [
+      "q1",
+      "q3",
+      "q2"
+    ],
+    "alphabet": [
+      "1",
+      "0"
+    ],
+    "transition": {
+      "q1": {
+        "0": "q2",
+        "1": "q2"
+      },
+      "q2": {
+        "0": "q3",
+        "1": "q3"
+      },
+      "q3": {
+        "0": "q1",
+        "1": "q1"
+      }
+    },
+    "startState": "q1",
+    "acceptState": [
+      "q1"
+    ]
+  },
+  "passCases": [
+    "000",
+    "111",
+    "010",
+    "101",
+    "111111",
+    "000000",
+    "101010",
+    "010101"
+  ],
+  "failCases": [
+    "00",
+    "11",
+    "10",
+    "01",
+    "11111",
+    "00000",
+    "01010",
+    "10101"
+  ]
+},
+{
+  "name": "alternate ones and zeroes beginning with zero",
+  "type": "dfa",
+  "tuple": {
+    "state": [
+      "q1",
+      "q3",
+      "q2",
+      "q4"
+    ],
+    "alphabet": [
+      "1",
+      "0"
+    ],
+    "transition": {
+      "q1": {
+        "0": "q2",
+        "1": "q4"
+      },
+      "q2": {
+        "0": "q4",
+        "1": "q3"
+      },
+      "q3": {
+        "0": "q2",
+        "1": "q4"
+      },
+      "q4": {
+        "0": "q4",
+        "1": "q4"
+      }
+    },
+    "startState": "q1",
+    "acceptState": [
+      "q3",
+      "q2"
+    ]
+  },
+  "passCases": [
+    "0",
+    "01",
+    "010",
+    "0101",
+    "01010",
+    "010101"
+  ],
+  "failCases": [
+    "",
+    "1",
+    "10",
+    "101",
+    "11",
+    "00",
+    "0100",
+    "011"
+  ]
+}
+]
