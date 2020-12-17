@@ -1,6 +1,6 @@
 const _ = require('underscore')._;
 
-class NFA {
+class NonDeterministicFiniteStateMachine {
   constructor(tuple) {
     this.state = tuple.state;
     this.alphabet = tuple.alphabet;
@@ -58,4 +58,4 @@ class NFA {
   }
 }
 
-module.exports = NFA;
+module.exports = NonDeterministicFiniteStateMachine;
